@@ -10,32 +10,7 @@ Future<List<dynamic>> newCustomAction(String index) async {
   bool flag = false;
 
   List<dynamic> selectedPrinter = [];
-  if (index == "0") {
-  } else {
-    FFAppState().printerDevice.forEach((element) {
-      if (FFAppState().posMode.toUpperCase() == "USB") {
-        if (FFAppState().targetPlatform == "windows") {
-          selectedPrinter.add(element);
-          flag = true;
-        } else {
-          if (element["vendorId"] == index) {
-            selectedPrinter.add(element);
-            flag = true;
-          }
-        }
-      } else if (FFAppState().posMode.toUpperCase() == "BLUETOOTH") {
-        if (element["address"] == index) {
-          selectedPrinter.add(element);
-          flag = true;
-        }
-      } else if (FFAppState().posMode.toUpperCase() == "ETHERNET") {
-        if (element["address"] == index) {
-          selectedPrinter.add(element);
-          flag = true;
-        }
-      }
-    });
-  }
+
   return selectedPrinter;
 
   // Add your function code here!

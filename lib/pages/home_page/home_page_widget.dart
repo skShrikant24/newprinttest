@@ -294,21 +294,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       const Color(0x00000000),
                                                 ),
                                               );
-                                              _model.selected =
-                                                  await actions.newCustomAction(
-                                                getJsonField(
-                                                  printerListItem,
-                                                  r'''$.address''',
-                                                ).toString(),
-                                              );
-                                              await actions.printBillPreview(
-                                                printerListItem,
-                                                FFAppState().isPrinterConnected,
-                                                FFAppState()
-                                                    .isPrinterConnected
-                                                    .toString(),
-                                                FFAppState().paperSize,
-                                              );
                                             } else {
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(

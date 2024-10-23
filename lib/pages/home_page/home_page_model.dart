@@ -16,8 +16,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   bool? resultDevice2;
   // Stores action output result for [Custom Action - connectDevice] action in Container widget.
   bool? con;
-  // Stores action output result for [Custom Action - newCustomAction] action in Container widget.
-  List<dynamic>? selected;
 
   @override
   void initState(BuildContext context) {}
